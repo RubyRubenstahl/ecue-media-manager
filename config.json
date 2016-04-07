@@ -1,0 +1,27 @@
+{
+  "media": {
+    "mediaDirectory": "c:\\ecue\\media\\",
+    "mediaTypeWatermark": true,
+    "extensions": [
+      ".wmv",
+      ".jpg",
+      ".bmp"
+    ],
+    "crop":{
+      "enabled": false,
+      "x":      "200",
+      "y":      "280",
+      "width":  "300",
+      "height": "150"
+    },
+    "resize": {
+      "enabled": true,
+      "width": "400",
+      "height": "300"
+    }
+  },
+  "ecue": {
+    "ipAddress": "127.0.0.1",
+    "port": "80"
+  }
+}
