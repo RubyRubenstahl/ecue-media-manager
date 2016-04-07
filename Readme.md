@@ -42,6 +42,7 @@ Setting up Programmer to run with the provided sample show file is pretty straig
 6. Exit the editor by pressing *Ctrl+H* or closing the window and selecting *yes* when prompted to save.
 
 7. To apply the change we'll need to reset the scripting environment and run this script again. Do this by first clicking ![Reset Globals Icon](http://ruby-lighting.com/github/ecue-media-manager/resetGlobals.jpg) at the top of the Macro Manager windows then run the script by either double-clicking on it or, while it is selected, click the ![Reun Script Icon](http://ruby-lighting.com/github/ecue-media-manager/runScript.jpg) button.
+
 ---
 Once you've completed these steps, Programmer should be ready to go. If you'd like to add the Media Manager functionallity into an existing show you'll need to do the following:
 
@@ -57,7 +58,7 @@ Once you've completed these steps, Programmer should be ready to go. If you'd li
 
 6. Perfrom the configuration steps listed above for the sample show file. 
 
-6. Add an Initialization trigger that runs the `intitializeMediaWatcher` script when the show is loaded.
+7. Add an Initialization trigger that runs the `intitializeMediaWatcher` script when the show is loaded.
 
 ###Installing the Backend
 As mentioned above, the Backend is written in Node.js. If you are not familiar with [Node.js](http://nodejs.org), it is a sever-side implementation of Javascript based on the V8 Javascript engine originally created for Google's Chrome web browser. In recent years it has become a widely used server-side technology amongst web developers and excels and handling back-end networking situations, making it an ideal solution for integrating Programmer with other systems.
@@ -78,7 +79,6 @@ c:\ecue\ecue-media-manager>npm install
 c:\ecue\ecue-media-manager>npm install winser -g
 c:\ecue\ecue-media-manager>winser -i -a
 ```
-
 6. After you type in these two lines you should see a bunch of information spit out by NPM, and the script should be installed and ready to go. If you see a bunch of lines starting with `npm ERR!` then your computer probably isn't connected to the internet or you've opened PowerShell without Admin privileges. 
 
 ### Configuring the Backend
