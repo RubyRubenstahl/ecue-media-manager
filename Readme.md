@@ -74,6 +74,7 @@ There is a little bit of command-line configuration that needs to take place, bu
 
 5. In powershell enter the following commands:
 ```
+c:\ecue\ecue-media-manager>npm install
 c:\ecue\ecue-media-manager>npm install winser -g
 c:\ecue\ecue-media-manager>winser -i -a
 ```
