@@ -171,6 +171,7 @@ function debounce(){
  * Generate the path to a thumbnail file from the original media file path
  */
 function getThumbnailPath(filepath){
+
   var fileName = path.basename(filepath);
   return path.join(options.thumbnailDir, fileName+ ".jpg");
 }
@@ -231,7 +232,7 @@ function isAccepteFileType(filename){
 // and copy the 'updating' thumbail into it.
 function verifyThumbnailFolderExists(){
   var tnPath = config.settings.media.thumbnailDirectory;
-  if(!fs.existsSync(getThumbnailPath())){
+  if(!fs.existsSync(tnPath)){
     log.warn('Thumbnail directory does not exist, creating:', tnPath);
     fs.mkdirpSync(tnPath);
     fs.copy(
