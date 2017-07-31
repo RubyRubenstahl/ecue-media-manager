@@ -1,4 +1,4 @@
-#ecue-media-manager
+# ecue-media-manager
 
 The e:cue media manager application allows you to turn [e:cue Programmer](http://ecue.com) into a responsive, customizable live video playback environment.
 
@@ -10,7 +10,7 @@ The Node.js backend watches a specified folder for supported image and video fil
 
 The application is designed to be customizable to suit a wide variety of situations. 
 
-##Features
+## Features
 - Automatically updates with configuration or media files change.
 
 - Currently playing panel in the Action Pad.
@@ -21,12 +21,12 @@ The application is designed to be customizable to suit a wide variety of situati
 
 - Error logging for easy diagnostics
 
-##Installing & configuring
+## Installing & configuring
 
-###Creating a media directory
+### Creating a media directory
 The application works by watching for changes in a specific directory. Before configuring the system, you should create this directory. But by default it is set to `c:\ecue\media`. As this is the standard media folder pre-configured with e:cue servers I'd sugges that you use this location for consistency, but it can be wherevery you like as long as the Programmer and the application have read & write permissions.
 
-###Setting up Programmer
+### Setting up Programmer
 Setting up Programmer to run with the provided sample show file is pretty straightforward. I'll cover this first and then explain how to incorporate the application into an existing show file.
 
 1. Open the sample show file.
@@ -60,7 +60,7 @@ Once you've completed these steps, Programmer should be ready to go. If you'd li
 
 7. Add an Initialization trigger that runs the `intitializeMediaWatcher` script when the show is loaded.
 
-###Installing the Backend
+### Installing the Backend
 As mentioned above, the Backend is written in Node.js. If you are not familiar with [Node.js](http://nodejs.org), it is a sever-side implementation of Javascript based on the V8 Javascript engine originally created for Google's Chrome web browser. In recent years it has become a widely used server-side technology amongst web developers and excels and handling back-end networking situations, making it an ideal solution for integrating Programmer with other systems.
 
 There is a little bit of command-line configuration that needs to take place, but it it is pretty easy to do. The only major requirement is that **you'll need to have the server that you're installing on to be connected to the internet during installation**.
@@ -105,7 +105,7 @@ If you're not seeing anything happen, open the log file called `logfile.log`, lo
 
 
 
-###Customizing
+### Customizing
 Once you have everything working, there are several options for customizing how thumbnails are rendered and presented.
 
 #### Customizing thumbnail rendering
@@ -120,7 +120,7 @@ In the `config.json` file there are a number of settings that can be changed.
 #### Customizing the Action Pad
 The supplied action pad comes with 24 buttons arranged in columns rows of 4. These buttons can be moved around and you can alter the number of available buttons.
 
-#####Adding/editing buttons#####
+##### Adding/editing buttons
 
 The most important thing to understand when editing the buttons is the Script ID naming convention and the `Action #2 setting`. Each media button is named `MPx_y` where `x` is the number of the media player and `y` is the number of the btton. The thumbnails are applied to the buttons using the script ID, so it must be correct for the system to function properly. The `Action #2` trigger also needs to be configured to send the correct play signal when clicked. 
 
@@ -131,12 +131,12 @@ To add a new button do the following:
 - Click on the `Action #2` tab
 - Change the macro call to be `videoButtonClick,x,y` where `x` is the Media Player number and `y` is the button number.
 
-#####Configuring button scripting#####
+##### Configuring button scripting
 If you've arranged the buttons to have a different number of columns, open the `intitializeMediaWatcher` script and change the `_columnWidth` parameter to the number of columns you are using. This will make sure that the scroll buttons scroll one row at a time.
 
 If you've changed the number of buttons, open the `intitializeMediaWatcher` script and change `_buttonCount` to match the number  of buttons you're using. 
 
 
-#Support
+# Support
 If you have any questions or issues getting this up and running send me an email at [ruby@ruby-lighting.com](mailto://ruby@ruby-lighting.com) and I'll try to assist you.
 
